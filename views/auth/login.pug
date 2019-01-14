@@ -1,0 +1,42 @@
+doctype html
+html(lang='zh-CN')
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='keywords', content=`${keywords ? keywords : "blog,iBlog"}`)
+        meta(name='description', content=`${description ? description : "iBlog"}`)
+        link(href='/static/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/static/css/bootstrap-addon.css', rel='stylesheet')
+        link(href='/static/css/site.css', rel='stylesheet')
+        link(href='/static/@fortawesome/fontawesome-free/css/all.min.css', rel='stylesheet')
+        link(href='/static/css/share.css', rel='stylesheet')
+        link(href='/static/css/animate-custom.css', rel='stylesheet')
+        title=title
+    body.fuelux
+        link(href='/static/libs/supersized/slideshow/css/supersized.css', rel='stylesheet')
+    link(href='/static/libs/supersized/slideshow/theme/supersized.shutter.css', rel='stylesheet')
+    link(href='/static/sweetalert/dist/sweetalert.css', rel='stylesheet')
+    link(href='/static/animate.css/animate.min.css', rel='stylesheet')
+    link(href='/static/css/account.css', rel='stylesheet')
+    .container.animated.fadeInDownSmall
+        .row.login-block
+            h3.col-md-4.col-md-offset-4.login-title.text-center=__("auth.title")
+            .col-md-4.col-md-offset-4.login-wrap
+                .form-group.form-group-lg
+                    input#txtUserName.form-control(type='text', placeholder=__("auth.username"))
+                .form-group.form-group-lg
+                    input#txtPwd.form-control(type='password', placeholder=__("auth.password"))
+                button#btnLogin.btn.btn-green.btn-lg.btn-block(type='button', autocomplete='off')
+                    i.fa.fa-sign-in-alt.fa-fw
+                    =`${' ' + __("auth.login")}`
+    // Time Bar
+    #progress-back.load-item
+        #progress-bar
+    script(type='text/javascript', src='/static/jquery/dist/jquery.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/bootstrap/dist/js/bootstrap.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/sweetalert/dist/sweetalert.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/libs/supersized/slideshow/js/supersized.3.2.7.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/libs/supersized/slideshow/theme/supersized.shutter.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/js-md5/build/md5.min.js', charset='utf-8')
+    script(type='text/javascript', src='/static/js/account.js', charset='utf-8')
