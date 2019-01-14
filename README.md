@@ -1,4 +1,4 @@
-# iBlog2
+# iBlog
 基于 Node.js 的开源个人开源博客系统后台系统
 
 ## [noginx](https://github.com/eshengsky/noginx)
@@ -131,7 +131,7 @@ $ NODE_ENV=production pm2 start bin/www -i 0
 ## 许可协议
 The MIT License (MIT)
 
-Copyright (c) 2016 Sky
+Copyright (c) 2018 张宁
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
