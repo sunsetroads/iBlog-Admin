@@ -1,12 +1,6 @@
 # iBlog
 基于 Node.js 的开源个人开源博客系统后台系统
 
-## [noginx](https://github.com/eshengsky/noginx)
-[noginx](https://github.com/eshengsky/noginx) 是基于 Node.js 的 HTTP 及反向代理服务器（类似 nginx），如果你有多台 iBlog2 服务器实例，你可以使用 [noginx](https://github.com/eshengsky/noginx) 进行代理转发和负载均衡。
-
-## [Wiki](https://github.com/eshengsky/iBlog2/wiki)
-整理了 iBlog2 中涉及 Node.js 及部分前端技术的知识点，适合新手学习、备查。
-
 ## 功能模块
 * 后台管理
   * 网站统计  
@@ -107,7 +101,7 @@ String 类型，管理员账号密码，必须是 md5 加密后的字符串。
 ## 线上部署
 
 #### 使用守护进程
-iBlog2 自带的守护进程能够利用多核 CPU 性能，并在出现异常退出后自动重启服务。
+iBlog 自带的守护进程能够利用多核 CPU 性能，并在出现异常退出后自动重启服务。
 
 ```Shell
 $ NODE_ENV=production node daemon.js
@@ -124,9 +118,6 @@ $ npm install -g pm2
 ```Shell
 $ NODE_ENV=production pm2 start bin/www -i 0
 ```
-
-#### 使用noginx
-[noginx](https://github.com/eshengsky/noginx) 是基于 Node.js 的 HTTP 及反向代理服务器（类似 nginx），如果你有多台 iBlog2 服务器实例，你可以使用 [noginx](https://github.com/eshengsky/noginx) 进行代理转发和负载均衡。
 
 ## 许可协议
 The MIT License (MIT)
