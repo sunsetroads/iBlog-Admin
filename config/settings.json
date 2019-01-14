@@ -1,0 +1,22 @@
+{
+  "SiteName": "iBlog",
+  "Author": "You Name",
+  "Email": "you_email@xxx.com",
+  "SiteDomain": "www.example.com",
+  "RecordNo": "豫ICP备XXX号",
+  "LogoPath": "/static/images/favicon (1).JPG",
+  "PageSize": "10",
+  "ExpandMenu": "true",
+  "ShowArticleSign": "false",
+  "Editor": "",
+  "CacheExpired": "300",
+  "TranslateKey": "y2RIaF6RifHnJeD1Szzw",
+  "EnableStatistics": "true",
+  "StatisticsId": "646bc927e37fe4c5c0e6e7c2d37fcb2c",
+  "EnableShare": "true",
+  "JiaThisId": "",
+  "ShowComments": "true",
+  "ShowGuestbook": "true",
+  "ChangyanId": "cyrUoGjWj",
+  "ChangyanConf": "prod_c77d5188bc137c8d9181720d02506ab6"
+}
