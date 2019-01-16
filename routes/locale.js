@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const i18n = require('i18n');
 
 // Change website language
 router.get('/locale/:lang', (req, res, next) => {

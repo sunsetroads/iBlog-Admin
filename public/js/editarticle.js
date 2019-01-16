@@ -300,7 +300,7 @@ function refreshCate() {
             $("#Categorylist ul").html("");
             $.each(data, function (key, value) {
                 if (!value.Link) {
-                    $("#Categorylist ul").append("<li data-value=\"" + value._id + "\">"
+                    $("#Categorylist ul").append("<li data-value=\"" + value.Alias + "\">"
                         + "<a href=\"#\">" + value.CateName + "</a>"
                         + "</li>");
                 }
