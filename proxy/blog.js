@@ -59,17 +59,8 @@ exports.getCategories = function (callback) {
 };
 
 //根据文章别名获取详情
-exports.getArticleDetail = function(alias, callback) {
-	const projection = {
-		CreateTime: 1,
-		_id: 0,
-		Title: 1,
-		Content: 1,
-		Labels: 1,
-		Url: 1,
-		Source: 1
-	};
-	postModel.find({Alias: alias}, projection, (err, data) => {
+exports.getArticleDetail = function (alias, callback) {
+	postModel.findOne({ Alias: alias }, {}, (err, data) => {
 		if (err) {
 			callback(err);
 		} else {
@@ -81,7 +72,10 @@ exports.getArticleDetail = function(alias, callback) {
 //获取文章列表
 exports.getArticles = function (params, callback) {
 	const query = getArticlesQuery(params);
-	const projection = getArticleProjection(params);
+	const projection = {
+		_id: 0,
+		Content: 0
+	};
 	postModel.find(query, projection, (err, data) => {
 		if (err) {
 			callback(err);
@@ -91,25 +85,10 @@ exports.getArticles = function (params, callback) {
 	})
 }
 
-function getArticleProjection(params) {
-	const projection = {
-		CreateTime: 1,
-		_id: 0,
-		Title: 1,
-		Alias: 1,
-		Url: 1,
-		Source: 1
-	};
-	if (params.isHome) {
-		projection.Labels = 1
-		projection.Summary = 1
-		projection.ViewCount = 1
-	}
-	return projection
-}
-
 function getArticlesQuery(params) {
 	const query = {};
+
+	query.IsActive = 1;
 
 	if (params.categoryAlias) {
 		query.CategoryId = params.categoryAlias;
