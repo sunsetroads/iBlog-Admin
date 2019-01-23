@@ -8,7 +8,7 @@
   "PageSize": "10",
   "ExpandMenu": "true",
   "ShowArticleSign": "false",
-  "Editor": "",
+  "Editor": "markdown",
   "CacheExpired": "300",
   "TranslateKey": "y2RIaF6RifHnJeD1Szzw",
   "EnableStatistics": "true",

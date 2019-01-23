@@ -188,7 +188,7 @@ router.post('/getArticles', (req, res, next) => {
                         Img: '/static/images/未分类.svg'
                     };
                 } else {
-                    cateItem = tool.jsonQuery(categories, { _id: cateId });
+                    cateItem = tool.jsonQuery(categories, { Alias: cateId });
                 }
                 if (cateItem) {
                     post.CategoryAlias = cateItem.Alias;

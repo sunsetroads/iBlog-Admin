@@ -70,12 +70,12 @@ block content
                                 .form-group
                                     label=__("admin.editarticle.article")
                                     .form-group
-                                        label#ueRadio.radio-custom.radio-inline(data-initialize='radio')
-                                            input.sr-only(name='ContentType', type='radio', value='')
-                                            | UEditor
                                         label#mdRadio.radio-custom.radio-inline(data-initialize='radio')
                                             input.sr-only(name='ContentType', type='radio', value='markdown')
                                             | Markdown
+                                        label#ueRadio.radio-custom.radio-inline(data-initialize='radio')
+                                            input.sr-only(name='ContentType', type='radio', value='')
+                                            | UEditor
                                     script#editor(type='text/plain')
                                         !=post.Content
                                     #mdEditor

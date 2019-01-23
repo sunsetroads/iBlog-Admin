@@ -46,7 +46,7 @@ $(function () {
             valign: "middle",
             width: "140px",
             filterControl: "select",
-            filterData: "url:/admin/t",
+            filterData: "url:/admin/getCateFilter",
             formatter: function (value, row) {
                 if (row.CategoryAlias) {
                     return "<a href=\"/blog/" + row.CategoryAlias + "\" target=\"_blank\">" + value + "</a>";

@@ -12,6 +12,7 @@ const ue = require('./routes/ue');
 const logger = require('./utility/logger');
 const passport = require('passport');
 const i18n = require('./models/i18n');
+const api = require('./routes/api')
 const app = express();
 
 /**
@@ -70,10 +71,21 @@ app.use(passport.session());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'node_modules')));
 
+// 解决跨域
+app.all('*', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By", ' 3.2.1')
+    next();
+});
+
 // 前台站点路由，无需登录
 app.use('/', locale);
 app.use('/', auth);
 app.use('/ue/controller', ue);
+//前台接口
+app.use('/api', api);
 
 // 后台站点路由，需要身份验证
 app.use('/admin', require('connect-ensure-login')
@@ -83,7 +95,7 @@ app.use('/admin', require('connect-ensure-login')
 app.use((req, res) => {
     const err = new Error('Not Found!');
     err.status = 404;
-    logger.errLogger(eadd .rr, req);
+    logger.errLogger(err, req);
     res.status(404).render('./shared/error', {
         code: 404,
         message: res.__('error.404_1')
