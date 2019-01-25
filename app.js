@@ -70,6 +70,7 @@ app.use(passport.session());
 // 静态文件
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'node_modules')));
+app.use('/', express.static(path.join(__dirname, 'dist')));
 
 // 解决跨域
 app.all('*', function (req, res, next) {
