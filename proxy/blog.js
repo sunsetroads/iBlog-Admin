@@ -50,8 +50,8 @@ exports.getCategories = function (callback) {
 		//添加未分类
 		let otherArr = articles.filter(item => item.CategoryId === "other")
 		result.push({
-			cateName: 'other',
-			alias: 'ohter',
+			cateName: 'Other',
+			alias: 'other',
 			count: otherArr.length
 		})
 		callback(null, result)
