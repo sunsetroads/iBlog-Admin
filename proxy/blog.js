@@ -106,16 +106,6 @@ function getArticlesQuery(params) {
 				$options: 'gi'
 			}
 		}, {
-			Summary: {
-				$regex: params.searchText,
-				$options: 'gi'
-			}
-		}, {
-			Content: {
-				$regex: params.searchText,
-				$options: 'gi'
-			}
-		}, {
 			Labels: {
 				$regex: params.searchText,
 				$options: 'gi'
