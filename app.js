@@ -11,6 +11,7 @@ const locale = require('./routes/locale');
 const ue = require('./routes/ue');
 const logger = require('./utility/logger');
 const passport = require('passport');
+const cors = require('cors')
 const i18n = require('./models/i18n');
 const api = require('./routes/api')
 const app = express();
@@ -21,7 +22,7 @@ const app = express();
 process.on('uncaughtException', err => {
     logger.errLogger(err);
 });
-
+ 
 /**
  * 记录未处理的Promise失败
  */
@@ -72,21 +73,12 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'node_modules')));
 app.use('/', express.static(path.join(__dirname, 'dist')));
 
-// 解决跨域
-app.all('*', function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "*");
-    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-    res.header("X-Powered-By", ' 3.2.1')
-    next();
-});
-
 // 前台站点路由，无需登录
 app.use('/', locale);
 app.use('/', auth);
 app.use('/ue/controller', ue);
 //前台接口
-app.use('/api', api);
+app.use('/api', cors(), api);
 
 // 后台站点路由，需要身份验证
 app.use('/admin', require('connect-ensure-login')
