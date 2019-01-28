@@ -76,7 +76,10 @@ exports.getArticles = function (params, callback) {
 		_id: 0,
 		Content: 0
 	};
-	postModel.find(query, projection, (err, data) => {
+	const options = {
+		sort: '-CreateTime'
+	};
+	postModel.find(query, projection, options, (err, data) => {
 		if (err) {
 			callback(err);
 		} else {
