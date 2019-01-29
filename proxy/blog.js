@@ -7,7 +7,7 @@ exports.getCategories = function (callback) {
 	async.parallel([
 		//获取所有文章
 		function (cb) {
-			postModel.find({}, { CategoryId: 1, _id: 0 }, (err, data) => {
+			postModel.find({ IsActive: true }, { CategoryId: 1, _id: 0 }, (err, data) => {
 				if (err) {
 					cb(err)
 				} else {
