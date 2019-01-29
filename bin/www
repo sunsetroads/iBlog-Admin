@@ -2,7 +2,7 @@ const app = require('../app');
 const ssl = require('../config.json').ssl;
 const logger = require('../utility/logger');
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 let server;
