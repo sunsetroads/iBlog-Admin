@@ -5,7 +5,7 @@
 
 
 ### 背景
-工作以来一直在做 iOS 客户端开发，个人觉得客户端开发有必要学习一门服务器语言，因此学习了 Node.js，由于之前没有接触过服务器。这里在 Github 找了个完成度较高又相对简单的项目 [iBlog2](https://github.com/eshengsky/iBlog2) 来学习。
+工作以来一直在做 iOS 客户端开发，个人觉得客户端开发有必要学习一门服务器语言，因此学习了 Node.js，由于之前没有接触过服务器开发，这里在 Github 找了个完成度较高又相对简单的项目 [iBlog2](https://github.com/eshengsky/iBlog2) 来学习。
 
 [iBlog2](https://github.com/eshengsky/iBlog2) 是一个完整的博客项目，包含了博客前台和后台管理系统，所有页面通过 Pug 模版生成。
 
