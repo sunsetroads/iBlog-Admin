@@ -4,7 +4,7 @@
 		"key": "/iBlog-Admin/ssl/iblog2.key",
 		"cert": "/iBlog-Admin/ssl/iblog2.crt"
 	},
-	"mongoUrl": "mongodb://zhangning:xxx@127.0.0.1/iBlog",
+	"mongoUrl": "mongodb://name:password@127.0.0.1/iBlog",
 	"redis": {
 		"enable": false,
 		"host": "127.0.0.1",
