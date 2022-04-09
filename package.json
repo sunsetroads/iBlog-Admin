@@ -32,7 +32,7 @@
     "lightbox2": "^2.10.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "metismenu": "^2.7.9",
-    "moment": "^2.11.1",
+    "moment": "^2.29.2",
     "mongoose": "~4.3.7",
     "mongoose-schema-extend": "^0.2.0",
     "multer": "^1.1.0",
